@@ -1,0 +1,19 @@
+.site-footer {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  padding: 2rem 0;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.white {
+  color: var(--color-white);
+}

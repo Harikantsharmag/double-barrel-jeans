@@ -1,0 +1,316 @@
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  background: url("/double-barrel-jeans/assets/images/hero.jpg") center/cover
+    no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(30, 42, 50, 0.1);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+  padding-inline: var(--space-md);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: var(--space-md);
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* SPLIT FEATURE (OUR MISSION / OUR CUSTOMERS) */
+.split-feature {
+  padding: 0;
+  margin: 0;
+}
+
+.split-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-block {
+  position: relative;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.feature-block img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.feature-block:hover img {
+  transform: scale(1.05);
+}
+
+.feature-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.7s ease-out both;
+}
+
+.feature-content h2 {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.feature-content p {
+  font-size: 1.05rem;
+  margin-bottom: var(--space-md);
+}
+
+.feature-content.light {
+  color: var(--color-white);
+  background-color: rgba(30, 42, 50, 0.5);
+}
+
+.feature-content.dark {
+  color: var(--color-black);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #b49460;
+  color: var(--color-white);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+}
+
+.btn.outline:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
+
+/* ABOUT PREVIEW */
+.about-preview .about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-text {
+  padding-right: var(--space-lg);
+}
+
+.about-text h2 {
+  font-size: 2.25rem;
+  margin-bottom: var(--space-md);
+}
+
+.about-text p {
+  margin-bottom: var(--space-sm);
+  max-width: 600px;
+}
+
+.about-image img {
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* TESTIMONIALS PREVIEW */
+.testimonials-preview {
+  background-color: var(--color-light-gray);
+  background: url("/double-barrel-jeans/assets/images/hero.jpg") center/cover
+    no-repeat;
+  text-align: center;
+}
+
+.testimonials-preview h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-bottom: 70px;
+}
+
+blockquote {
+  background-color: var(--color-white);
+  padding: var(--space-lg);
+  font-style: italic;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+blockquote span {
+  display: block;
+  margin-top: var(--space-sm);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--color-navy);
+}
+
+/* CATALOGUE PREVIEW */
+.catalogue-preview h2 {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-image {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+}
+
+.product-info p {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.catalogue-preview .hero-btn.subtle {
+  display: inline-block;
+  text-align: center;
+}
+
+.button-center {
+  text-align: center;
+}
+
+/* ANIMATION */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .feature-block {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .feature-content {
+    margin: var(--space-md);
+    padding: var(--space-md);
+    text-align: center;
+  }
+
+  .feature-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-text {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
